@@ -46,6 +46,8 @@ describe('Teste o componente PokemonDetails.js', () => {
     expect(moreDetailsLink).toBeInTheDocument();
     userEvent.click(moreDetailsLink);
 
+    screen.getByRole('heading', { name: /pikachu details/i });
+
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).toBeInTheDocument();
     userEvent.click(checkbox);
